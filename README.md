@@ -1,40 +1,39 @@
-<<<<<<< HEAD
-# piya-web-app
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Piya Trading - Online Beverage Catalog & Store
 
-## Getting Started
+## About the Project
 
-First, run the development server:
+Piya Trading is a modern full-stack e-commerce application focused on beverages. The frontend is built with Next.js and React, offering a sleek and responsive user interface. The backend is developed with Node.js and Express, providing RESTful APIs connected to a PostgreSQL database hosted on Neon and managed with DrizzleORM. The entire app is deployed seamlessly on Vercel.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Frontend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** Next.js (React-based SSR/SSG)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animation:** Framer Motion
+- **Icons:** Lucide-react
+- **Image Optimization:** Next.js Image component
+- **Theme:** Light/Dark mode toggle
 
-## Learn More
+### Backend
 
-To learn more about Next.js, take a look at the following resources:
+- **Runtime:** Node.js
+- **Framework:** Express.js
+- **Database:** PostgreSQL hosted on Neon
+- **ORM:** DrizzleORM for type-safe database access
+- **Authentication:** JWT-based user authentication
+- **API:** RESTful endpoints for product catalog, user management, and order processing
+- **Security:** Input validation, password hashing, CORS, rate limiting
+- **Deployment:** Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> 47bcdd7 (Initial commit from Create Next App)
+   ```bash
+   git clone https://github.com/yourusername/piya-trading.git
+   cd piya-trading
+   npm install
