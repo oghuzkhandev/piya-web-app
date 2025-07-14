@@ -29,7 +29,7 @@ const products: Product[] = [
     price: "€1.50",
     description: "Classic soft drink with refreshing taste.",
     category: "Soft Drinks",
-    image: "/images/cocacola.png  ",
+    image: "/images/cocacola.png",
   },
   {
     id: 2,
@@ -91,9 +91,9 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen">
-      <section className="p-10 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex gap-10">
+      <section className="p-10 bg-gray-50 dark:bg-zinc-900 text-gray-900 dark:text-gray-100 flex gap-10">
         <div className="flex gap-10 min-h-screen">
-          <aside className="w-64 max-h-[600px] bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-10">
+          <aside className="w-64 max-h-[600px] bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 sticky top-10">
             <h2 className="text-2xl font-bold mb-6">Categories</h2>
             <ul className="flex flex-col space-y-6">
               {categories.map((cat) => {
@@ -115,18 +115,17 @@ export default function ProductsPage() {
                     transition 
                     transform 
                     duration-300
-                    shadow-lg
+                    shadow-sm
                     ${
                       isSelected
-                        ? "bg-green-700 text-white shadow-lg shadow-green-700 transition-all duration-300 ease-in-out"
-                        : "bg-white text-gray-800 hover:text-green-700 border-2 border-slate-100"
+                        ? "bg-green-700 text-white shadow-green-600"
+                        : "bg-white text-gray-800 hover:text-green-700 border-2 border-slate-200 dark:border-gray-700"
                     }
                     ${
                       !isSelected
                         ? "hover:scale-105 hover:underline underline-offset-4 decoration-green-500"
                         : ""
                     }
-                    shadow-sm
                   `}
                   >
                     <span className="font-semibold">{cat}</span>
@@ -138,7 +137,7 @@ export default function ProductsPage() {
                           ? "bg-white text-green-700"
                           : "bg-green-100 text-green-700"
                       }
-                      shadow
+                      shadow-sm
                     `}
                     >
                       {count}
@@ -158,7 +157,7 @@ export default function ProductsPage() {
               filteredProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-xl shadow-slate-300 overflow-hidden flex flex-col h-[400px] border-2 border-slate-300"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-[400px] border border-slate-300 dark:border-gray-700"
                 >
                   <img
                     src={product.image}
@@ -166,18 +165,18 @@ export default function ProductsPage() {
                     className="w-full h-48 object-contain rounded-md mt-3"
                     loading="lazy"
                   />
-                  <div className="p-4 flex flex-col">
-                    <h3 className="text-lg font-semibold mb-1">
-                      {product.name}
-                    </h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 max-h-16 overflow-hidden">
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
+                    <p className="text-md text-gray-600 dark:text-gray-300 max-h-16 overflow-hidden">
                       {product.description}
                     </p>
-                    <div className="mt-4 font-bold text-green-700 dark:text-green-400 text-xl">
+                    <div className="mt-1 font-bold text-green-700 dark:text-green-500 text-xl">
                       {product.price}
                     </div>
                     <button
-                      className="mt-4 bg-white text-blue-500 border-2 border-blue-500 font-semibold hover:bg-blue-500 hover:text-white hover:shadow-blue-500 shadow-lg py-2 rounded-md transition duration-300 ease-in-out"
+                      className="mt-auto bg-white dark:bg-gray-700 text-blue-600 border hover:scale-105 hover:shadow-blue-600 border-blue-600 font-semibold rounded-md py-2 shadow-sm transition duration-300 ease-in-out
+                      hover:bg-blue-600 hover:text-white hover:shadow-md
+                      dark:hover:bg-blue-700 dark:hover:shadow-md"
                       onClick={() =>
                         toast.success(`${product.name} added to cart!`, {
                           icon: "🛒",

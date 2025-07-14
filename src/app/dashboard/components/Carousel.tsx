@@ -239,7 +239,7 @@ export default function BeverageCarousel() {
 
           <a
             href={slides[current].buttonLink}
-            className="w-full max-w-[400px] mx-auto flex items-center justify-center px-8 py-3 bg-slate-100 border-2 shadow-lg hover:-translate-y-1 hover:scale-105 hover:shadow-orange-500 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold rounded-full transition-all duration-300 ease-in-out dark:bg-zinc-800 dark:border-orange-400 dark:text-orange-400 dark:hover:bg-orange-400 dark:hover:text-zinc-900"
+            className="w-full max-w-[400px] mx-auto flex items-center justify-center px-8 py-3 bg-slate-100 border shadow-lg hover:-translate-y-1 hover:scale-105 hover:shadow-orange-500 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold rounded-full transition-all duration-300 ease-in-out dark:bg-zinc-800 dark:border-orange-400 dark:text-orange-400 dark:hover:bg-orange-400 dark:hover:text-zinc-900"
           >
             {slides[current].buttonIcon}
             <div className="text-center">{slides[current].buttonText}</div>

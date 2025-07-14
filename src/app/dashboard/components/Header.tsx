@@ -120,7 +120,7 @@ export default function Header() {
             <NavigationMenuList className="flex gap-10">
               <NavigationMenuItem>
                 <Link href="/" passHref>
-                  <NavigationMenuLink className="flex items-center justify-center whitespace-nowrap font-semibold text-md w-[150px] h-[50px] rounded-lg transition-all duration-200 ease-in-out text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-5 py-2 border hover:border-yellow-300 hover:shadow-yellow-300 hover:border-[2px] border-gray-300 dark:border-zinc-700 shadow-lg hover:shadow-md gap-2">
+                  <NavigationMenuLink className="flex items-center justify-center whitespace-nowrap font-semibold text-md w-[140px] h-[50px] rounded-lg transition-all duration-200 ease-in-out text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-5 py-2 border hover:border-yellow-300 hover:shadow-yellow-300 hover:border-[2px] border-gray-300 dark:border-zinc-700 shadow-lg hover:shadow-md gap-2">
                     <div className="flex items-center justify-center gap-3">
                       <span className="text-lg">🏠</span>
                       <span>Home</span>
@@ -130,7 +130,7 @@ export default function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="flex items-center justify-center whitespace-nowrap font-semibold text-md w-[150px] h-[50px] rounded-lg transition-all duration-200 ease-in-out text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-5 py-2 border hover:border-yellow-300 hover:shadow-yellow-300 hover:border-[2px] border-gray-300 dark:border-zinc-700 shadow-lg hover:shadow-md gap-2">
+                <NavigationMenuTrigger className="flex items-center justify-center whitespace-nowrap font-semibold text-md w-[140px] h-[50px] rounded-lg transition-all duration-200 ease-in-out text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-5 py-2 border hover:border-yellow-300 hover:shadow-yellow-300 hover:border-[2px] border-gray-300 dark:border-zinc-700 shadow-lg hover:shadow-md gap-2">
                   <span className="text-lg">📦</span>
                   <span>Catalog</span>
                 </NavigationMenuTrigger>
@@ -151,14 +151,14 @@ export default function Header() {
                                 {title}
                               </div>
                             </div>
-                            <p className="text-sm font-medium text-gray-600 border-b-2 border-orange-300 mt-3 pl-8">
+                            <p className="text-md font-medium text-gray-600 border-b-2 border-orange-300 mt-3 pl-8">
                               {description}
                             </p>
                             {image && (
                               <img
                                 src={image}
                                 alt={title}
-                                className="w-full h-30 object-contain rounded-md mt-3"
+                                className="w-full h-24 object-contain rounded-md mt-5"
                               />
                             )}
                           </Link>
@@ -181,12 +181,12 @@ export default function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="flex items-center justify-center whitespace-nowrap font-semibold text-md w-[150px] h-[50px] rounded-lg transition-all duration-200 ease-in-out text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-5 py-2 border hover:border-yellow-300 hover:shadow-yellow-300 hover:border-[2px] border-gray-300 dark:border-zinc-700 shadow-lg hover:shadow-md gap-2">
+                <NavigationMenuTrigger className="flex items-center justify-center whitespace-nowrap font-semibold text-md w-[140px] h-[50px] rounded-lg transition-all duration-200 ease-in-out text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-5 py-2 border hover:border-yellow-300 hover:shadow-yellow-300 hover:border-[2px] border-gray-300 dark:border-zinc-700 shadow-lg hover:shadow-md gap-2">
                   <span className="text-lg">👥</span>
                   <span>About Us</span>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[500px] gap-3 p-4 bg-white dark:bg-zinc-800 rounded-md shadow-lg">
+                  <ul className="grid w-[600px] gap-3 p-4 bg-white dark:bg-zinc-800 rounded-md shadow-lg">
                     {overOnsItems.map(({ title, href, description, icon }) => (
                       <li key={href} className="row-span-1">
                         <Link
@@ -201,7 +201,7 @@ export default function Header() {
                               {title}
                             </div>
                           </div>
-                          <p className="text-sm font-medium text-gray-600 border-b-2 border-orange-300 mt-3 pl-8">
+                          <p className="text-md font-medium text-gray-600 border-b-2 border-orange-300 mt-3 pl-8">
                             {description}
                           </p>
                         </Link>
@@ -224,7 +224,7 @@ export default function Header() {
 
               <NavigationMenuItem>
                 <Link href="/dashboard/services" passHref>
-                  <NavigationMenuLink className="flex items-center justify-center whitespace-nowrap font-semibold text-md w-[150px] h-[50px] rounded-lg transition-all duration-200 ease-in-out text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-5 py-2 border hover:border-yellow-300 hover:shadow-yellow-300 hover:border-[2px] border-gray-300 dark:border-zinc-700 shadow-lg hover:shadow-md gap-2">
+                  <NavigationMenuLink className="flex items-center justify-center whitespace-nowrap font-semibold text-md w-[140px] h-[50px] rounded-lg transition-all duration-200 ease-in-out text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-5 py-2 border hover:border-yellow-300 hover:shadow-yellow-300 hover:border-[2px] border-gray-300 dark:border-zinc-700 shadow-lg hover:shadow-md gap-2">
                     <div className="flex items-center justify-center gap-3">
                       <span className="text-lg">💼</span>
                       <span>Services</span>
@@ -234,12 +234,12 @@ export default function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="flex items-center justify-center whitespace-nowrap font-semibold text-md w-[150px] h-[50px] rounded-lg transition-all duration-200 ease-in-out text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-5 py-2 hover:border-yellow-300 hover:shadow-yellow-300 hover:border-[2px] border border-gray-300 dark:border-zinc-700 shadow-lg hover:shadow-md gap-2">
+                <NavigationMenuTrigger className="flex items-center justify-center whitespace-nowrap font-semibold text-md w-[140px] h-[50px] rounded-lg transition-all duration-200 ease-in-out text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 px-5 py-2 hover:border-yellow-300 hover:shadow-yellow-300 hover:border-[2px] border border-gray-300 dark:border-zinc-700 shadow-lg hover:shadow-md gap-2">
                   <span className="text-lg">📬</span>
                   <span>Contact</span>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[500px] gap-3 p-4 bg-white dark:bg-zinc-800 rounded-md shadow-lg">
+                  <ul className="grid w-[600px] gap-3 p-4 bg-white dark:bg-zinc-800 rounded-md shadow-lg">
                     {contactItems.map(({ title, href, description, icon }) => (
                       <li key={href} className="row-span-1">
                         <Link
@@ -254,7 +254,7 @@ export default function Header() {
                               {title}
                             </div>
                           </div>
-                          <p className="text-sm font-medium text-gray-600 border-b-2 border-orange-300 mt-3 pl-8">
+                          <p className="text-md font-semibold text-gray-600 border-b-2 border-orange-300 mt-3 pl-8">
                             {description}
                           </p>
                         </Link>
@@ -303,7 +303,7 @@ export default function Header() {
 
           <Button
             variant="destructive"
-            className="py-4 w-30 rounded-lg bg-white text-md text-blue-500 hover:text-white hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-lg border-2 border-blue-500 dark:bg-zinc-800 dark:text-white dark:hover:bg-red-600 transition-all duration-400 ease-in-out flex items-center gap-2"
+            className="w-30 rounded-lg bg-white text-md text-blue-500 hover:text-white hover:bg-blue-500 hover:shadow-blue-500 hover:shadow-lg border-[1px] border-blue-500 dark:bg-zinc-800 dark:text-white dark:hover:bg-red-600 transition-all duration-400 ease-in-out flex items-center gap-2 hover:animate-pulse"
           >
             <User className="w-5 h-5" />
             <span>Login</span>
@@ -336,11 +336,11 @@ function DutchClock() {
   }, []);
 
   return (
-    <div className="hidden sm:flex items-center gap-2 px-4 py-1 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-lg shadow-inner transition-all w-[200px]">
+    <div className="hidden sm:flex items-center gap-2 px-4 py-1 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-lg shadow-inner transition-all w-[120px]">
       <span className="text-sm font-mono text-gray-700 dark:text-gray-200">
         🇳🇱 Time {time}
       </span>
-      <Clock className="w-4 h-4 text-orange-500 dark:text-orange-300 animate-spin-slow" />
+      <Clock className="w-8 h-8 text-orange-500 dark:text-orange-300 animate-spin-slow" />
     </div>
   );
 }
