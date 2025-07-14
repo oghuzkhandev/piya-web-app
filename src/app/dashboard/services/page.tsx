@@ -109,7 +109,6 @@ const ServiceCard = ({
   index: number;
 }) => {
   const Icon = service.icon;
-
   return (
     <motion.div
       variants={itemVariants}
@@ -121,15 +120,11 @@ const ServiceCard = ({
       whileTap={{ scale: 0.95 }}
       className="group"
     >
-      <Card className="relative overflow-hidden bg-card/50 backdrop-blur-md border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-[var(--shadow-elegant)] h-full">
-        {/* Gradient overlay */}
+      <Card className="relative overflow-hidden bg-card/50 dark:bg-card/30 backdrop-blur-md border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-[var(--shadow-elegant)] h-full">
         <div
           className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
         />
-
-        {/* Floating orb */}
         <div className="absolute -top-2 -right-2 w-20 h-20 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
         <CardContent className="p-8 relative z-10">
           <div className="flex items-start justify-between mb-6">
             <div
@@ -137,20 +132,15 @@ const ServiceCard = ({
             >
               <Icon className="w-8 h-8 text-white" />
             </div>
-            <Badge
-              variant="secondary"
-              className="bg-orange-200 border-2"
-            >
-              <Sparkles className="w-5 h-5 mr-1" />
+            <Badge variant="secondary" className="bg-orange-200 dark:bg-orange-700 border-2">
+              <Sparkles className="w-5 h-5 mr-1 text-orange-600 dark:text-orange-300" />
               {service.stats}
             </Badge>
           </div>
-
-          <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+          <h3 className="text-2xl font-bold text-foreground dark:text-foreground-light mb-4 group-hover:text-primary transition-colors duration-300">
             {service.title}
           </h3>
-
-          <p className="text-muted-foreground leading-relaxed mb-6 group-hover:text-foreground/80 transition-colors duration-300">
+          <p className="text-muted-foreground dark:text-muted-foreground-light leading-relaxed mb-6 group-hover:text-foreground/80 transition-colors duration-300">
             {service.description}
           </p>
         </CardContent>
@@ -161,13 +151,11 @@ const ServiceCard = ({
 
 export default function ModernServicesSection() {
   return (
-    <section className="relative min-h-screen w-full py-24 px-4 sm:px-8 lg:px-20 bg-gradient-to-r from-slate-100 to-purple-200">
-      <div className="absolute inset-0 bg-background/50 backdrop-blur-sm" />
-
-      {/* Animated background elements */}
+    <section className="relative min-h-screen w-full py-24 px-4 sm:px-8 lg:px-20 bg-gradient-to-r from-slate-100 to-purple-200 dark:bg-gradient-to-r dark:from-gray-900 dark:to-gray-800">
+      <div className="absolute inset-0 bg-background/50 dark:bg-background/80 backdrop-blur-sm" />
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-primary/10 dark:bg-primary/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -179,7 +167,7 @@ export default function ModernServicesSection() {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 dark:bg-accent/20 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.4, 0.7, 0.4],
@@ -192,9 +180,7 @@ export default function ModernServicesSection() {
           }}
         />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Header Section */}
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: -50 }}
@@ -208,26 +194,26 @@ export default function ModernServicesSection() {
           >
             <Badge
               variant="outline"
-              className="mb-6 px-6 py-2 text-md font-semibold bg-purple-500/20 border-primary/30 text-primary"
+              className="mb-6 px-6 py-2 text-md font-semibold bg-purple-500/20 dark:bg-purple-700/30 border-primary/30 text-primary dark:text-primary-light"
             >
               <Sparkles className="w-8 h-8 mr-2" />
               Premium Services
             </Badge>
           </motion.div>
-
           <motion.h2
-            className="text-6xl sm:text-7xl font-black bg-gradient-to-r from-zinc-800 to-gray-500 bg-clip-text text-transparent mb-6"
+            className="text-6xl sm:text-7xl font-black bg-gradient-to-r from-zinc-800 to-gray-500 bg-clip-text text-transparent dark:from-gray-200 dark:to-gray-400 mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             Exceptional
             <br />
-            <span className="text-primary">Experience</span>
+            <span className="text-primary dark:text-primary-light">
+              Experience
+            </span>
           </motion.h2>
-
           <motion.p
-            className="text-xl text-muted-foreground font-bold max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-muted-foreground dark:text-muted-foreground-light font-bold max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
@@ -237,8 +223,6 @@ export default function ModernServicesSection() {
             journey.
           </motion.p>
         </motion.div>
-
-        {/* Services Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -249,19 +233,17 @@ export default function ModernServicesSection() {
             <ServiceCard key={service.title} service={service} index={index} />
           ))}
         </motion.div>
-
-        {/* Bottom CTA */}
         <motion.div
           className="text-center mt-20"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <p className="text-muted-foreground text-lg mb-6">
+          <p className="text-muted-foreground dark:text-muted-foreground-light text-lg mb-6">
             Ready to experience the difference?
           </p>
           <motion.button
-            className="bg-gradient-to-r from-red-500 to-blue-500 text-primary-foreground px-8 py-4 rounded-2xl font-semibold text-lg shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-glow)] transition-all duration-300"
+            className="bg-gradient-to-r from-red-500 to-blue-500 dark:from-red-700 dark:to-blue-700 text-primary-foreground px-8 py-4 rounded-2xl font-semibold text-lg shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-glow)] transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
